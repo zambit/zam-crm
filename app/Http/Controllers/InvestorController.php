@@ -56,6 +56,9 @@ class InvestorController extends Controller
         $contact->addCustomField(69011, [
             [$person->telegram, 'OTHER']
         ]);
+        $contact->addCustomField(132327, [
+            [$person->country, 'COUNTRY']
+        ]);
         $contact['linked_leads_id'] = $id;
         $p_id = $contact->apiAdd();
 

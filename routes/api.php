@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Dotzero\LaravelAmoCrm\AmoCrmManager;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,12 @@ Route::group(['prefix' => 'investors'], function() {
     Route::post('/', 'InvestorController@addToWl');
 });
 
+/*Route::get('test', function (AmoCrmManager $amocrm) {
+
+        $account = $amocrm->account;
+
+        dd($account->apiCurrent());
+        print_r($account->apiCurrent());
+
+        return;
+});*/
