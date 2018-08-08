@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Dotzero\LaravelAmoCrm\AmoCrmManager;
+use GuzzleHttp\Client;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +23,20 @@ Route::group(['prefix' => 'investors'], function() {
     Route::post('/', 'InvestorController@addToWl');
 });
 
-/*Route::get('test', function (AmoCrmManager $amocrm) {
+Route::get('test', function (AmoCrmManager $amocrm) {
 
-        $account = $amocrm->account;
+//    try {
+        $client = new GuzzleHttp\Client();
 
-        dd($account->apiCurrent());
-        print_r($account->apiCurrent());
+//        $data = json_encode('email: test@test.test');
 
-        return;
-});*/
+        $response = $client->request('POST', 'https://hooks.zapier.com/hooks/catch/3624585/gf14c4/', [
+            'form_params' => ['email' => 'a.skurlatov@gmail.com']
+        ]);
+
+//        return $response;
+/*    } catch (\Exception $e) {
+        return $e;
+    }*/
+
+});

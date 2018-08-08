@@ -11,9 +11,12 @@
         "dotzero/amocrm": "^0.3.28",
         "dotzero/laravel-amocrm": "^0.5.0",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "laravelrus/sleepingowl": "4.*@dev"
+        "laravelrus/sleepingowl": "4.*@dev",
+        "symfony/psr-http-message-bridge": "^1.0",
+        "zendframework/zend-diactoros": "^1.8"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
